@@ -1,4 +1,5 @@
 const getDataFromExcel = require("./getDataFromExcel");
+const insertData = require("./saveData");
 let fs = require("fs");
 const path = require("path");
 
@@ -24,7 +25,14 @@ process.stdin.on("data", (data) => {
     try {
       const result = getDataFromExcel(filePath);
 
-      
+      (async () => {
+        try {
+          insertData(result);
+          console.log("Données insérées avec succès !");
+        } catch (error) {
+          console.error("Erreur lors de l'insertion des données :", error);
+        }
+      })();
     } catch (error) {
       console.error(`Erreur lors de la lecture du fichier : ${error.message}`);
     }
