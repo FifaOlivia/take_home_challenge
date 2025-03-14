@@ -1,11 +1,11 @@
 const mysql = require("mysql");
-require('dotenv').config();
+require("dotenv").config();
 
 const connection = mysql.createConnection({
-  database: process.env.DB_DATABASE, 
-  host: process.env.DB_HOST,         
-  user: process.env.DB_USER,        
-  password: process.env.DB_PASSWORD,
+  database: process.env.DB_DATABASE, // Nom de la base de données
+  host: process.env.DB_HOST, // Hôte de la base de données
+  user: process.env.DB_USER, // Nom d'utilisateur de la base de données
+  password: process.env.DB_PASSWORD, // Mot de passe de la base de données
 });
 
 connection.connect(function (err) {
@@ -33,19 +33,20 @@ let sql2 =
   " PRIMARY KEY (Id) )";
 connection.query(sql2, function (err, results) {
   if (err) throw err;
- // console.log("Table matricules created");
+  // console.log("Table matricules created");
 });
 
 //insert data
 
 const insertData = (dataArray) => {
-  let sql3 = "INSERT INTO matricules (matricule, nom, prenom, status, datedenaissance) VALUES ?";
+  let sql3 =
+    "INSERT INTO matricules (matricule, nom, prenom, status, datedenaissance) VALUES ?";
   let values = dataArray.map((item) => [
     item.matricule,
     item.nom,
     item.prenom,
     item.status,
-    item.datedenaissance
+    item.datedenaissance,
   ]);
 
   return connection.query(sql3, [values], function (err, result) {
