@@ -1,25 +1,32 @@
-# Mon Projet Node.js
+# Importing XLSX data into MySQL
 
-## Description
+**This project enables you to quickly import a list of people saved in an XLSX file into a MySQL database. The import is designed to take less than 1 minute, even for files containing up to 30,000 lines.**
 
-Ceci est un projet Node.js qui fait XYZ.
+## Technologies used
+
+- [Node.js](https://nodejs.org/) JavaScript runtime environment
+- [MySQL](https://www.mysql.com/) Relational database
+- A package manager like npm or yarn
 
 ## Installation
 
-1. Clonez le dépôt :
-   ```bash
-   git clone https://github.com/votre-utilisateur/mon-projet-node.git
+> 1. Clone this project's repository :
 
-2. Accédez au répertoire du projet :
+```bash
+git clone git@github.com:FifaOlivia/take_home_challenge.git
 
-   cd take_home_challenge
+```
 
-3. Installez les dépendances :
+> 2. Install dependencies: **npm install**
+> 3. Create a database for the project
+> 4. Create a table to store people data.
+> 5. The XLSX file must contain the following columns (in this order) for the script to work correctly:
 
-   npm install
-
-4. Utilisation
-
-Pour démarrer le projet, utilisez la commande suivante :
-
-    node index.js ..............
+- _matricule_,
+- _nom_
+- _prenom_
+- _status_
+- \_datedenaissance,
+  > 6. Configure environment variables
+  > 7. Open your terminal and run node index.js
+  > 8. Provide the path to the XLSX file: <XLSX_FILE_PATH>.
