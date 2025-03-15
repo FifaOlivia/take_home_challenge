@@ -1,7 +1,3 @@
-# Node modules
-
-node_modules/
-
 # Fichiers d'environnement
 
 .env
