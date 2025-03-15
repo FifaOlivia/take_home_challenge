@@ -10,23 +10,24 @@
 
 ## Installation
 
-> 1. Clone this project's repository :
+1. Clone this project's repository :
 
 ```bash
 git clone git@github.com:FifaOlivia/take_home_challenge.git
 
 ```
 
-> 2. Install dependencies: **npm install**
-> 3. Create a database for the project
-> 4. Create a table to store people data.
-> 5. The XLSX file must contain the following columns (in this order) for the script to work correctly:
+2. Install dependencies: **npm install**
+3. Create a database for the project
+4. Create a table to store people data.
+5. The XLSX file must contain the following columns (in this order) for the script to work correctly:
 
 - _matricule_,
 - _nom_
 - _prenom_
 - _status_
-- \_datedenaissance,
-  > 6. Configure environment variables
-  > 7. Open your terminal and run node index.js
-  > 8. Provide the path to the XLSX file: <XLSX_FILE_PATH>.
+- _datedenaissance_
+
+6. Configure environment variables
+7. Open your terminal and run node index.js
+8. Provide the path to the XLSX file: <XLSX_FILE_PATH>.
